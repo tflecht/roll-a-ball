@@ -10,5 +10,5 @@
 #sudo installer -dumplog -package Unity.pkg -target /
 
 git clone https://github.com/sttz/install-unity.git
-./install-unity/install-unity.py --package Mac --package Windows 5.4
+sudo ./install-unity/install-unity.py --package Mac --package Windows 5.4
 
