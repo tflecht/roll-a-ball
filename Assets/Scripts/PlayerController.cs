@@ -5,8 +5,9 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
 	public float speed;
+
 	public Text countText;
-	public Text WinText;
+	public Text winText;
 
 	private Rigidbody rb;
 	private int count;
@@ -16,7 +17,8 @@ public class PlayerController : MonoBehaviour {
 		rb = GetComponent<Rigidbody> ();
 		count = 0;
 		SetCountText ();
-		WinText.text = "";
+		winText.text = "";
+		Debug.Log ("Hi!");
 	}
 
 	void FixedUpdate ()
@@ -35,7 +37,7 @@ public class PlayerController : MonoBehaviour {
 			++count;
 			SetCountText ();
 			if (count >= 15) {
-				WinText.text = "You Win!";
+				winText.text = "You Win!";
 			}
 
 		}
