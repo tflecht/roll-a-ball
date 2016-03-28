@@ -18,7 +18,6 @@ public class PlayerController : Photon.MonoBehaviour {
 		count = 0;
 		SetCountText ();
 		winText.text = "";
-		Debug.Log ("Hi!");
 	}
 
 	void FixedUpdate ()
@@ -31,13 +30,18 @@ public class PlayerController : Photon.MonoBehaviour {
 		rb.AddForce (movement * speed);
 	}
 
+	void OnCollisionEnter(Collision collision)
+	{
+		Debug.Log ("OnCollisionEnter with " + collision.gameObject.ToString());
+	}
+
 	void OnTriggerEnter(Collider other) {
 		if (! photonView.isMine) {
 			return;
 		}
 		if (other.gameObject.CompareTag ("Pick Up")) {
 			//other.gameObject.SetActive (false);
-			other.GetComponent<PickUpController>().PickUp();
+			other.GetComponent<PickUpController> ().PickUp ();
 			++count;
 			SetCountText ();
 			if (count >= 15) {

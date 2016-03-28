@@ -18,8 +18,10 @@ public class MatchMaker : PunBehaviour {
 
 	public override void OnJoinedRoom()
 	{
+		// PhotonNetwork.playerList.Length;
 		Debug.Log ("Joined a room!!!!");
-		GameObject player = PhotonNetwork.Instantiate("Player", new Vector3(0f, 0.5f, 0f), Quaternion.identity, 0);
+		float x_coordinate = -8.0f + (5 * PhotonNetwork.playerList.Length);
+		GameObject player = PhotonNetwork.Instantiate("Player", new Vector3(x_coordinate, 0.5f, 0f), Quaternion.identity, 0);
 		PlayerController player_controller = player.GetComponent<PlayerController> ();
 		player_controller.enabled = true;
 		player_controller.countText = countText;
@@ -31,7 +33,7 @@ public class MatchMaker : PunBehaviour {
 
 		if (PhotonNetwork.isMasterClient) {
 			Debug.Log ("I'm the master, so I'm creating the Pick Ups");
-			PhotonNetwork.Instantiate("Pick Ups", new Vector3(0f, 0.5f, 0f), Quaternion.identity, 0);
+			PhotonNetwork.InstantiateSceneObject("Pick Ups", new Vector3(0f, 0.5f, 0f), Quaternion.identity, 0, null);
 		}
 	}
 		

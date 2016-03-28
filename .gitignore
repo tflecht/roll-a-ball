@@ -33,6 +33,6 @@ Thumbs.db
 # ====================== #
 # Build script generated #
 # ====================== #
-Build/
-Builds/
+Build
+Builds
 unity.log
