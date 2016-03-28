@@ -22,4 +22,7 @@ MonoBehaviour:
   EnableLobbyStatistics: 0
   RpcList:
   - 53656e64436861744d657373616765
+  - pickedUp
+  - PickUp
+  - disable
   DisableAutoOpenWizard: 1

@@ -31,7 +31,7 @@ public class MatchMaker : PunBehaviour {
 
 		if (PhotonNetwork.isMasterClient) {
 			Debug.Log ("I'm the master, so I'm creating the Pick Ups");
-			GameObject pickups = PhotonNetwork.Instantiate("Pick Ups", new Vector3(0f, 0.5f, 0f), Quaternion.identity, 0);
+			PhotonNetwork.Instantiate("Pick Ups", new Vector3(0f, 0.5f, 0f), Quaternion.identity, 0);
 		}
 	}
 		

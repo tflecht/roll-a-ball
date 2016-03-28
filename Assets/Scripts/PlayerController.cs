@@ -36,7 +36,8 @@ public class PlayerController : Photon.MonoBehaviour {
 			return;
 		}
 		if (other.gameObject.CompareTag ("Pick Up")) {
-			other.gameObject.SetActive (false);
+			//other.gameObject.SetActive (false);
+			other.GetComponent<PickUpController>().PickUp();
 			++count;
 			SetCountText ();
 			if (count >= 15) {

@@ -87,8 +87,8 @@
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\MatchMaker.cs" />
      <Compile Include="Assets\Scripts\NetworkCharacter.cs" />
+     <Compile Include="Assets\Scripts\PickUpController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\Rotator.cs" />
      <None Include="Assets\Photon Unity Networking\Changelog.txt" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\StreamingAssets\build_info.txt" />
